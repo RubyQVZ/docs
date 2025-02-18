@@ -1,88 +1,363 @@
 ---
-title: 'Markdown Syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
+title: "Guía de Usuario - Esolbay (Rol: Admin Comprador)"
+description: "Documentación basada en el PDF de la Guía de Usuario para el rol Admin Comprador"
 ---
 
-## Titles
+# Guía de Usuario - Esolbay (Rol: Admin Comprador)
 
-Best used for section headers.
+Esolbay es una plataforma diseñada para facilitar la gestión de cotizaciones y compras 
+entre empresas compradoras y proveedores. En esta guía, te explicaremos paso a paso 
+cómo utilizar la plataforma en el rol de **Admin Comprador**, detallando cada sección y sus 
+funcionalidades.
 
-```md
-## Titles
-```
+---
 
-### Subtitles
+## Inicio de Sesión
 
-Best use to subsection headers.
+Para acceder a la plataforma como Admin Comprador, debes ingresar tu usuario y 
+contraseña en la pantalla de inicio de sesión.
 
-```md
-### Subtitles
-```
+---
 
-<Tip>
+## Menú Principal
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+Al iniciar sesión, en la parte izquierda de la pantalla verás tu foto de perfil con tu nombre 
+debajo. Al hacer clic en esta sección, se desplegará un menú con las siguientes opciones:
 
-</Tip>
+### 1. Ver Perfil Empresa
 
-## Text Formatting
+Aquí podrás consultar la información de tu empresa, incluyendo:
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+- Nombre de la empresa  
+- Calificación como vendedor  
+- Calificación como comprador  
+- C.U.I.T  
+- Email de facturación  
+- Responsables  
+- Contactos (números de teléfono registrados)  
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+### 2. Configuración del Usuario
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
+En esta sección puedes ver y editar los siguientes datos:
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+- Nombre y apellido  
+- Email  
+- Cargo  
+- Contraseña  
+- Rol  
+- Datos de contacto (agregar o eliminar teléfonos)
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+### 3. Configuración Empresa
 
-## Linking to Pages
+Aquí podrás cargar y actualizar datos de la empresa:
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+- Razón Social  
+- Nombre de Fantasía  
+- Página Web  
+- Email de Facturación  
+- Logo de la empresa  
+- Documentación fiscal  
+- Certificados de bienes y/o servicios  
+- Certificados de la empresa  
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+### 4. Salir
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+Esta opción cierra tu sesión y te redirige a la pantalla de inicio de sesión.
 
-## Blockquotes
+---
 
-### Singleline
+## Secciones del Menú Principal
 
-To create a blockquote, add a `>` in front of a paragraph.
+A continuación, te explicamos cada sección disponible en el menú lateral izquierdo.
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+### 1. Mis Cotizaciones
 
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
+En esta sección podrás visualizar y gestionar las cotizaciones creadas. La información se 
+presenta en formato tabla con las siguientes columnas:
 
-### Multiline
+- Código de cotización  
+- Cotización Original  
+- Tipo de cotización (Bienes - Servicios)  
+- Rubro  
+- Título  
+- Fecha de publicación  
+- Fecha de finalización  
+- Estado  
+- Cantidad de ofertas  
+- Acción (ver, modificar, cancelar si está publicada)  
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+#### Creación de Cotización
 
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
+Para crear una nueva cotización, haz clic en el botón **Agregar** y completa los siguientes campos:
 
-### LaTeX
+##### Cabecera
 
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
+- **Permite ofertas parciales** (opcional)  
+- **Licitación cerrada** (opcional)  
+  - Si seleccionas esta opción, aparecerá una solapa de Proveedores para asignar directamente un proveedor.  
+- **Contrato marco** (opcional)  
+  - Si seleccionas esta opción, se mostrarán campos adicionales:  
+    - Fecha Inicio Contrato  
+    - Fecha Fin Contrato  
+    - Plazo de Entrega en Días  
+    - Periodicidad de Revisión  
 
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
+##### Datos a completar
 
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+- **Tipo de Cotización** (Bienes o Servicios)  
+- **Rubro**  
+- **Título de la Cotización**  
+- **Forma de Pago**  
+- **Días de Pago**  
+- **Modalidad de Entrega** (Con Entrega o Con Retiro)  
+- **Fecha y Hora de Publicación**  
+- **Fecha y Hora de Finalización**  
+- **Detalles adicionales**  
+- **Fecha de Entrega**  
+- **Usuario Encargado**  
+- **Presupuesto Estimado** (Moneda, Monto, Imputación)  
+
+##### Materiales
+
+En esta etapa podrás agregar los materiales o productos a solicitar, incluyendo:
+
+- Código de Artículo (opcional)  
+- Material  
+- Marca  
+- Cantidad  
+- Unidad de Medida  
+- Descripción  
+- Certificación (si aplica)  
+- Adjuntar archivos (si aplica)  
+
+##### Archivos
+
+- Subir archivo
+
+Una vez completados todos los datos, la cotización quedará en estado **Borrador** hasta su 
+publicación.
+
+---
+
+### 2. Órdenes de Compra
+
+Aquí podrás ver todas las órdenes de compra generadas, con las siguientes columnas:
+
+- Código de cotización  
+- Título  
+- Código de Oferta  
+- Fecha publicación oferta  
+- Fecha Creación Orden  
+- Estado de Orden  
+- Número de Orden  
+- Acción  
+
+Podrás buscar órdenes de compra mediante filtros como código, estado o fecha.
+
+---
+
+### 3. SOLPED (Solicitudes de Pedido)
+
+Esta sección está diseñada para que las personas de un área específica puedan generar 
+una Solicitud de Pedido. Posteriormente, el departamento de compras visualizará la 
+solicitud y procederá a crear una cotización basada en ella.
+
+Al ingresar a esta sección, se mostrará una tabla con todas las solicitudes registradas con 
+las siguientes columnas:
+
+- Código de solicitud  
+- Empresa  
+- Tipo de cotización  
+- Rubro  
+- Título  
+- Estado  
+- Imputación  
+- Fecha de solicitud  
+- Fecha de entrega  
+- Acción (Ver - Modificar - Eliminar)  
+
+También podrás buscar solicitudes de pedido filtrando tu búsqueda por código, categorías, 
+rubro, título y solicitante.
+
+#### Opciones disponibles en la sección
+
+En la parte superior derecha del listado de solicitudes encontrarás dos opciones:
+
+1. **Seleccionar SOLPED**  
+   - Te permite seleccionar una o más solicitudes listadas.  
+   - Una vez seleccionadas, podrás aceptarlas para ser redirigido a la creación de una 
+     cotización basada en la solicitud elegida.
+
+2. **Agregar**  
+   - Aquí podrás crear una nueva solicitud de pedido completando la información requerida.
+
+#### Creación de una nueva solicitud de pedido
+
+Para crear una solicitud de pedido, haz clic en el botón **Agregar** y completa los siguientes datos:
+
+- **Cabecera**:  
+  - **Pre Cotización**: Tildar el casillero si aplica.  
+  - **Tipo de Cotización** (Bienes o Servicios).  
+  - **Rubro**  
+  - **Título de la Solicitud**  
+  - **Modalidad de Entrega**:  
+    - Con entrega: Al seleccionar esta opción deberás completar los datos 
+      para la entrega. Aparecerá el campo “Domicilio de entrega” con un 
+      menú desplegable de direcciones guardadas y la opción de agregar 
+      una nueva dirección en caso de que desees elegir un domicilio diferente.  
+    - Con retiro.  
+  - **Presupuesto Estimado**:  
+    - Seleccione Moneda (Pesos ARS o Dólares).  
+    - Monto  
+  - **Fecha de Entrega**.  
+  - **Imputación** (opcional)
+
+- **Materiales**:  
+  Verás enlistados los materiales de la solicitud, con las columnas:  
+  Código, Cantidad, Material, Marca, Descripción, Certificación, Acción.  
+  Podrás agregar nuevos materiales completando los siguientes datos:  
+  - Código de Artículo (opcional)  
+  - Material  
+  - Marca  
+  - Cantidad  
+  - Unidad de Medida  
+  - Descripción del Material  
+  - Certificación (checkbox y campo “detalle de certificación” si aplica)  
+  - Carga de archivos
+
+- **Archivos**:  
+  - Subir archivo
+
+---
+
+### 4. SOLPED - Técnicos
+
+Esta sección funciona de manera similar a la de SOLPED, con la diferencia de que las 
+solicitudes de pedido técnico requieren la aprobación previa de un usuario con un rol 
+específico antes de que el departamento de compras pueda aceptar la solicitud y crear la 
+cotización.
+
+En esta sección podrás visualizar y agregar solicitudes que requieran validación técnica 
+antes de proceder a la cotización. Para ello, se sigue el mismo proceso y estructura que en 
+la sección SOLPED.
+
+---
+
+### 5. Usuarios
+
+En esta sección podrás visualizar los usuarios o miembros asociados a la empresa.  
+Los verás enlistados en una tabla con las siguientes columnas:
+
+- Nombre  
+- Apellido  
+- Email  
+- Cargo  
+- Acción (Modificar - Eliminar)  
+
+#### Opciones disponibles en la sección
+
+En la parte superior derecha del listado de solicitudes encontrarás dos opciones:
+
+1. **Usuarios inactivos**:  
+   - Podrás visualizar los usuarios que fueron dados de baja.  
+   - Están enlistados en una tabla con las siguientes columnas:  
+     - # (Número)  
+     - Nombre  
+     - Apellido  
+     - Email  
+     - Cargo  
+     - Acción (Volver a dar de alta al usuario)
+
+2. **Agregar**:  
+   - Aquí podrás dar de alta a un nuevo usuario completando los siguientes campos:  
+     - Nombre  
+     - Apellido  
+     - Mail  
+     - Cargo  
+     - Contraseña (Mínimo 8 dígitos, al menos una letra mayúscula, una minúscula y un número)  
+     - Repita la contraseña  
+     - Rol (Comprador - Aprobador de Remitos - Aprobador de Factura - Pagador - 
+       Solicitante - Supervisor - Aprobador de Solicitudes)  
+       - Para los roles de **Comprador** y **Supervisor** se podrán completar de 
+         forma opcional los siguientes campos:  
+         - Monto Inicial ($ARS)  
+         - Monto Tope ($ARS)  
+         - Monto Inicial ($USD)  
+         - Monto Tope ($USD)
+
+---
+
+### 6. Domicilios
+
+Desde aquí podrás administrar los domicilios registrados en la empresa. Los mismos se 
+presentan en formato tabla con las siguientes columnas:
+
+- Tipo  
+- Calle  
+- Código Postal  
+- Localidad  
+- Provincia  
+- Acción (Ver - Modificar - Eliminar)  
+
+Para agregar un nuevo domicilio, haz clic en **Agregar** y completa los siguientes campos:
+
+- Tipo de Domicilio (Fiscal - Legal - Entrega - Retiro)  
+- Nombre  
+- Calle  
+- Altura  
+- Código Postal  
+- Piso  
+- Departamento (opcional)  
+- Provincia (seleccionar una provincia de Argentina)  
+- Localidad (correspondiente a la provincia seleccionada)
+
+Por último, se debe guardar el domicilio.
+
+---
+
+### 7. Empresas
+
+Esta sección muestra un listado de empresas en formato de cuadro con las siguientes 
+columnas:
+
+- ID  
+- Empresa  
+- C.U.I.T  
+- Perfil  
+- Rubros  
+- Estado (activo o inactivo)  
+- Membresía  
+- Empresa Madre  
+- Acción (Vista de empresa)
+
+Podrás buscar empresas enlistadas mediante filtros:
+
+- Razón Social / Nombre Fantasía  
+- CUIT  
+- Perfil (Vendedor y comprador - Vendedor - Comprador)  
+- Categorías (Bienes - Servicios)  
+- Rubro  
+- Estado (Activo, Baja total, Baja parcial)  
+- Membresía (Sí - No)
+
+También puedes exportar la tabla de empresas haciendo clic en el botón de **Exportar** en 
+la parte superior derecha de la pantalla.
+
+---
+
+### 8. Reportes
+
+En esta sección, haciendo clic en **exportar**, podrás exportar archivos Excel que contienen, 
+según corresponda, el histórico de:
+
+- Mis Cotizaciones: Incluye todas las cotizaciones enviadas.  
+- Ofertas Recibidas: Incluye todas las ofertas recibidas de los proveedores.
+
+---
+
+### 9. Invitar
+
+Aquí podrás invitar a nuevos proveedores a unirse a la plataforma enviando invitaciones por 
+mail.
+
+---
