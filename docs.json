@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Esolbay",
+  "name": "Mint Starter Kit",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -14,10 +14,11 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Guía de Usuario",
+            "group": "Get Started",
             "pages": [
-              "introduccion",
-              "roladmincomprador"
+              "introduction",
+              "quickstart",
+              "development"
             ]
           },
           {
