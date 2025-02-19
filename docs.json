@@ -14,11 +14,10 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Guía de Usuario",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "introduccion",
+              "roladmincomprador"
             ]
           },
           {
